@@ -310,6 +310,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/04/28/80天/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Clin">
+      <meta itemprop="description" content="Clin的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Clin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/28/80天/" itemprop="url">
+                  80天
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-28 22:29:15 / Modified: 22:30:40" itemprop="dateCreated datePublished" datetime="2019-04-28T22:29:15+08:00">2019-04-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第80天"><a href="#第80天" class="headerlink" title="第80天"></a>第80天</h2><h1 id="重新开始"><a href="#重新开始" class="headerlink" title="重新开始"></a>重新开始</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_city_aqi</span><span class="params">(city_pinyin)</span>:</span></span><br><span class="line">    </span><br><span class="line">    url = <span class="string">'http://pm25.in/'</span> + city_pinyin</span><br><span class="line">    r = requests.get(url, timeout=<span class="number">30</span>)</span><br><span class="line">    soup = BeautifulSoup(r.text, <span class="string">'lxml'</span>)</span><br><span class="line">    div_list = soup.find_all(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'span1'</span>&#125;)</span><br><span class="line"></span><br><span class="line">    city_aqi = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">8</span>):</span><br><span class="line">        div_content = div_list[i]</span><br><span class="line">        caption = div_content.find(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'caption'</span>&#125;).text.strip()</span><br><span class="line">        value = div_content.find(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'value'</span>&#125;).text.strip()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># city_aqi.append((caption, value))</span></span><br><span class="line">        city_aqi.append(value)</span><br><span class="line">    <span class="keyword">return</span> city_aqi</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_all_cities</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    url = <span class="string">'http://pm25.in/'</span></span><br><span class="line">    city_list = []</span><br><span class="line">    r = requests.get(url, timeout=<span class="number">30</span>)</span><br><span class="line">    soup = BeautifulSoup(r.text, <span class="string">'lxml'</span>)</span><br><span class="line">    city_div = soup.find_all(<span class="string">'a'</span>)</span><br><span class="line">    city_link_list = city_div.find_all(<span class="string">'a'</span>)</span><br><span class="line">    <span class="keyword">for</span> city_link <span class="keyword">in</span> city_link_list:</span><br><span class="line">        city_name = city_link.text</span><br><span class="line">        city_pinyin = city_link[<span class="string">'href'</span>][<span class="number">1</span>:]</span><br><span class="line">        city_list.append((city_name, city_pinyin))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    city_list = get_all_cities()</span><br><span class="line">    header = [<span class="string">'City'</span>, <span class="string">'AQI'</span>, <span class="string">'PM2.5/1h'</span>, <span class="string">'PM10/h'</span>, <span class="string">'CO/1h'</span>, <span class="string">'NO2/1h'</span>, <span class="string">'O3/1h'</span>, <span class="string">'O3/8h'</span>, <span class="string">'SO2/1h'</span>]</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'china_city_aqi.csv'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>, newline=<span class="string">''</span>) <span class="keyword">as</span> f:</span><br><span class="line">        writer = csv.writer(f)</span><br><span class="line">        writer.writerow(header)</span><br><span class="line">        <span class="keyword">for</span> i,city <span class="keyword">in</span> enumerate(city_list):</span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span>) % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">                print(<span class="string">'已处理第&#123;&#125;条记录。（共&#123;&#125;条记录）'</span>.format(i+<span class="number">1</span>, len(city_list)))</span><br><span class="line">            city_name = city[<span class="number">0</span>]</span><br><span class="line">            city_pinyin = city[<span class="number">1</span>]</span><br><span class="line">            city_aqi = get_city_aqi(city_pinyin)</span><br><span class="line">            row = [city_name] + city_aqi</span><br><span class="line">            writer.writerow(row)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/03/24/一个Ubuntu的心得/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1729,165 +1887,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/03/04/67tian/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Clin">
-      <meta itemprop="description" content="Clin的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Clin">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/04/67tian/" itemprop="url">
-                  67tian
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-04 21:45:19 / Modified: 21:54:39" itemprop="dateCreated datePublished" datetime="2019-03-04T21:45:19+08:00">2019-03-04</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><h1 id="python-matplotlib库的使用"><a href="#python-matplotlib库的使用" class="headerlink" title="python matplotlib库的使用"></a>python matplotlib库的使用</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">roll_dice</span><span class="params">()</span>:</span></span><br><span class="line">    roll = random.randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">    <span class="keyword">return</span> roll</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    roll_list = []</span><br><span class="line">    total_times = <span class="number">100</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(total_times):</span><br><span class="line">        roll1 = roll_dice()</span><br><span class="line">        roll2 = roll_dice()</span><br><span class="line">        roll_list.append(roll1 + roll2)</span><br><span class="line"></span><br><span class="line">    plt.hist(roll_list, bins=range(<span class="number">2</span>, <span class="number">14</span>), normed=<span class="number">1</span>, edgecolor=<span class="string">'black'</span>, linewidth=<span class="number">1</span>)</span><br><span class="line">    plt.title(<span class="string">'骰子点数统计'</span>)</span><br><span class="line">    plt.xlabel(<span class="string">'点数'</span>)</span><br><span class="line">    plt.ylabel(<span class="string">'频率'</span>)</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ ==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="C-链表跟类的实现"><a href="#C-链表跟类的实现" class="headerlink" title="C++链表跟类的实现"></a>C++链表跟类的实现</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//链表简单表示</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NULL 0</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="keyword">float</span> score;</span><br><span class="line">	Student *next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Student a, b, c, *head, *p;</span><br><span class="line">	a.num = <span class="number">31001</span>;</span><br><span class="line">	a.score = <span class="number">89.5</span>;</span><br><span class="line">	b.num = <span class="number">31003</span>;</span><br><span class="line">	b.score = <span class="number">90</span>;</span><br><span class="line">	c.num = <span class="number">31007</span>;</span><br><span class="line">	c.score = <span class="number">85</span>;</span><br><span class="line">	head = &amp;a;</span><br><span class="line">	a.next = &amp;b;</span><br><span class="line">	b.next = &amp;c;</span><br><span class="line">	c.next = <span class="literal">NULL</span>;</span><br><span class="line">	p = head;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;num &lt;&lt; <span class="string">" "</span> &lt;&lt; p-&gt;score &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125; <span class="keyword">while</span> (p != <span class="literal">NULL</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//c++类的实现</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> hour;</span><br><span class="line">	<span class="keyword">int</span> minute;</span><br><span class="line">	<span class="keyword">int</span> sec;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Time t1;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t1.hour;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t1.minute;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t1.sec;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; t1.hour &lt;&lt; <span class="string">":"</span> &lt;&lt; t1.minute &lt;&lt; <span class="string">":"</span> &lt;&lt; t1.sec;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1937,7 +1936,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">71</span>
+                    <span class="site-state-item-count">72</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
