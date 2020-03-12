@@ -310,6 +310,220 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2020/03/12/ACM-let1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Clin">
+      <meta itemprop="description" content="Clin的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Clin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/12/ACM-let1/" itemprop="url">
+                  ACM_let1
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-03-12 16:52:49 / Modified: 17:05:11" itemprop="dateCreated datePublished" datetime="2020-03-12T16:52:49+08:00">2020-03-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="ACM-zoj2812"><a href="#ACM-zoj2812" class="headerlink" title="ACM_zoj2812"></a>ACM_zoj2812</h2><blockquote>
+<p>A checksum is an algorithm that scans a packet of data and returns a single number. The idea is that if the packet is changed, the checksum will also change, so checksums are often used for detecting transmission errors, validating document contents, and in many other situations where it is necessary to detect undesirable changes in data.</p>
+</blockquote>
+<blockquote>
+<p>For this problem, you will implement a checksum algorithm called Quicksum. A Quicksum packet allows only uppercase letters and spaces. It always begins and ends with an uppercase letter. Otherwise, spaces and letters can occur in any combination, including consecutive spaces.</p>
+</blockquote>
+<blockquote>
+<p>A Quicksum is the sum of the products of each character’s position in the packet times the character’s value. A space has a value of zero, while letters have a value equal to their position in the alphabet. So, A=1, B=2, etc., through Z=26. Here are example Quicksum calculations for the packets “ACM” and “MID CENTRAL”:</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<pre><code>ACM: 1*1  + 2*3 + 3*13 = 46
+</code></pre></blockquote>
+</blockquote>
+<blockquote>
+<p>MID CENTRAL: 1<em>13 + 2</em>9 + 3<em>4 + 4</em>0 + 5<em>3 + 6</em>5 + 7<em>14 + 8</em>20 + 9<em>18 + 10</em>1 + 11*12 = 650<br>Input: The input consists of one or more packets followed by a line containing only # that signals the end of the input. Each packet is on a line by itself, does not begin or end with a space, and contains from 1 to 255 characters.</p>
+</blockquote>
+<p>Output: For each packet, output its Quicksum on a separate line in the output.</p>
+<table>
+<thead>
+<tr>
+<th>Example Input:</th>
+<th>Example Output:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACM</td>
+<td>46</td>
+</tr>
+<tr>
+<td>MID CENTRAL</td>
+<td>650</td>
+</tr>
+<tr>
+<td>REGIONAL PROGRAMMING CONTEST</td>
+<td>4690</td>
+</tr>
+<tr>
+<td>ACN</td>
+<td>49</td>
+</tr>
+<tr>
+<td>A C M</td>
+<td>75</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>14</td>
+</tr>
+<tr>
+<td>BBC</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">string</span> str;</span><br><span class="line">	<span class="keyword">int</span> i,sum;</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>,str)&amp;&amp;str!=<span class="string">"#"</span>)&#123;</span><br><span class="line">		sum=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(str[i]!=<span class="string">' '</span>)&#123;</span><br><span class="line">				sum+=(str[i]-<span class="string">'@'</span>)*(i+<span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/10/07/linear-16/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1771,170 +1985,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/10/07/linear-7/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Clin">
-      <meta itemprop="description" content="Clin的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Clin">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/07/linear-7/" itemprop="url">
-                  linear-7
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-10-07 21:46:42 / Modified: 21:52:10" itemprop="dateCreated datePublished" datetime="2019-10-07T21:46:42+08:00">2019-10-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="7-7-最短连续序列长度-简单穷举-10-分"><a href="#7-7-最短连续序列长度-简单穷举-10-分" class="headerlink" title="7-7 最短连续序列长度-简单穷举 (10 分)"></a>7-7 最短连续序列长度-简单穷举 (10 分)</h1><p>有n个正整数组成的一个序列(a1,a,2, …, aN).对于给定的一个序列(a1, a2, …, aN)，(1,2,3,…N)为这个序列对应元素的序号.ai元素的序号为i.给定一个整数S , 找出一个长度最短的连续序列，使得组成这个序列的各个整数的和不小于S，如果存在多个这样的最短序列 ，则找序号字典序最小的连续序列。比如：序列 9，8，9，6，4； S=3； 那么最短长度显然是1；字典序最小的序列就是第一个元素组成的序列 9 。比如：序列 5 1 3 5 10 7 4 9 2 8； S=15； 那么最短长度显然是2；最短的连续序列5 10 ， 10 7 ， 均满足最短的要求 ，我们要求输出序列序号字典序最小的序列，显然是 5 10 。题目来源自 北大oj题目改编.</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入m组数据。每组数据的第一行为整数n和S(3&lt;n&lt;=1000 000,S&lt;1000 000 000);第2行为n个正整数,均不超过10000.输入结束为文件结束标志(EOF);</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>对于每组数据,第一行输出满足条件的最短序列的长度，第2行输出元素序号字典序最小的那个序列。如果不存在,2行均输出0.</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>在这里给出一组输入。例如：输入3组数据，第一行就是组数</p>
-<p>3<br>10 15<br>5 1 3 5 10 7 4 9 2 8<br>5 11<br>1 2 3 4 5<br>5 16<br>1 2 3 4 5</p>
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>在这里给出相应的输出。例如：注意序列最后一个数后没有空格字符.否则会导致格式错误.</p>
-<p>2<br>5 10<br>3<br>3 4 5<br>0<br>0</p>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">0</span>, n = <span class="number">0</span>, S = <span class="number">0</span>, lengh = <span class="number">0</span>, begin = <span class="number">0</span>,j;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; m;</span><br><span class="line">	<span class="keyword">int</span> indec1=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; vec2(m, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;());</span><br><span class="line">	<span class="keyword">while</span> (indec1&lt;m) &#123;</span><br><span class="line">		lengh = <span class="number">0</span>; begin = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; S;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec1(n);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; vec1[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> j = i;</span><br><span class="line">			<span class="keyword">int</span> sum = <span class="number">0</span>; </span><br><span class="line">			<span class="keyword">bool</span> no_full = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">while</span> (j &lt; n &amp;&amp; no_full)</span><br><span class="line">			&#123;</span><br><span class="line">				sum += vec1[j++];</span><br><span class="line">				<span class="keyword">if</span> (sum &gt;= S)no_full = <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (sum &lt; S)<span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					lengh = j - i<span class="number">-1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (lengh &gt; j - i<span class="number">-1</span>) &#123;</span><br><span class="line">					lengh = j - i<span class="number">-1</span>;</span><br><span class="line">					begin = i;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (lengh &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> index;</span><br><span class="line">			vec2[indec1].push_back(lengh+<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">for</span> (index = begin; index &lt; begin + lengh+<span class="number">1</span> ; index++)</span><br><span class="line">				vec2[indec1].push_back(vec1[index]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			vec2[indec1].push_back(<span class="number">0</span>);</span><br><span class="line">			vec2[indec1].push_back(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		indec1++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">		lengh= vec2[i].size();</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; lengh<span class="number">-1</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (j == <span class="number">0</span>)<span class="built_in">cout</span> &lt;&lt; vec2[i][<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; vec2[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; vec2[i][j];</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1984,7 +2034,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">89</span>
+                    <span class="site-state-item-count">90</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2081,7 +2131,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
