@@ -310,6 +310,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/10/07/linear-3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Clin">
+      <meta itemprop="description" content="Clin的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Clin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/07/linear-3/" itemprop="url">
+                  linear-3
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-07 21:45:21 / Modified: 21:58:54" itemprop="dateCreated datePublished" datetime="2019-10-07T21:45:21+08:00">2019-10-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="7-3-Table-Tennis-30-分"><a href="#7-3-Table-Tennis-30-分" class="headerlink" title="7-3 Table Tennis (30 分)"></a>7-3 Table Tennis (30 分)</h1><p>A table tennis club has N tables available to the public. The tables are numbered from 1 to N. For any pair of players, if there are some tables open when they arrive, they will be assigned to the available table with the smallest number. If all the tables are occupied, they will have to wait in a queue. It is assumed that every pair of players can play for at most 2 hours.</p>
+<p>Your job is to count for everyone in queue their waiting time, and for each table the number of players it has served for the day.</p>
+<p>One thing that makes this procedure a bit complicated is that the club reserves some tables for their VIP members. When a VIP table is open, the first VIP pair in the queue will have the priviledge to take it. However, if there is no VIP in the queue, the next pair of players can take it. On the other hand, if when it is the turn of a VIP pair, yet no VIP table is available, they can be assigned as any ordinary players.</p>
+<h2 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h2><p>Each input file contains one test case. For each case, the first line contains an integer N (≤10000) - the total number of pairs of players. Then N lines follow, each contains 2 times and a VIP tag: HH:MM:SS - the arriving time, P - the playing time in minutes of a pair of players, and tag - which is 1 if they hold a VIP card, or 0 if not. It is guaranteed that the arriving time is between 08:00:00 and 21:00:00 while the club is open. It is assumed that no two customers arrives at the same time. Following the players’ info, there are 2 positive integers: K (≤100) - the number of tables, and M (&lt; K) - the number of VIP tables. The last line contains M table numbers.</p>
+<h2 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h2><p>For each test case, first print the arriving time, serving time and the waiting time for each pair of players in the format shown by the sample. Then print in a line the number of players served by each table. Notice that the output must be listed in chronological order of the serving time. The waiting time must be rounded up to an integer minute(s). If one cannot get a table before the closing time, their information must NOT be printed.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>9<br>20:52:00 10 0<br>08:00:00 20 0<br>08:02:00 30 0<br>20:51:00 10 0<br>08:10:00 5 0<br>08:12:00 10 1<br>20:50:00 10 0<br>08:01:30 15 1<br>20:53:00 10 1<br>3 1<br>2</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>08:00:00 08:00:00 0<br>08:01:30 08:01:30 0<br>08:02:00 08:02:00 0<br>08:12:00 08:16:30 5<br>08:10:00 08:20:00 10<br>20:50:00 20:50:00 0<br>20:51:00 20:51:00 0<br>20:52:00 20:52:00 0<br>3 3 2</p>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/10/07/linear-2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1748,163 +1912,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/03/11/71tian/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Clin">
-      <meta itemprop="description" content="Clin的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Clin">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/11/71tian/" itemprop="url">
-                  71tian
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-11 23:16:01 / Modified: 23:17:47" itemprop="dateCreated datePublished" datetime="2019-03-11T23:16:01+08:00">2019-03-11</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="完善系统功能"><a href="#完善系统功能" class="headerlink" title="完善系统功能"></a>完善系统功能</h2><h1 id="插入、修改、删除链表数据"><a href="#插入、修改、删除链表数据" class="headerlink" title="插入、修改、删除链表数据"></a>插入、修改、删除链表数据</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct student * <span class="title">myadd</span><span class="params">(struct student *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> n;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		system(<span class="string">"cls"</span>);</span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">newnode</span> = <span class="title">new</span> <span class="title">student</span>;</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"加入学生信息"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"学号"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"电话"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"学院"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; newnode-&gt;sno &gt;&gt; newnode-&gt;sname &gt;&gt; newnode-&gt;phone &gt;&gt; newnode-&gt;collge;</span><br><span class="line">		newnode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">if</span> (head == <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			head = newnode;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			struct student *node = head;</span><br><span class="line">			<span class="keyword">while</span> (node-&gt;next != <span class="literal">NULL</span>&amp;&amp;node-&gt;sno!=newnode-&gt;sno)</span><br><span class="line">			&#123;</span><br><span class="line">					node = node-&gt;next;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (node-&gt;sno == newnode-&gt;sno)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"该学生信息已经存在"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			    node-&gt;next = newnode;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"是否退出加入学生信息并返回主菜单？（y/n）"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	&#125; <span class="keyword">while</span> (n != <span class="string">'y'</span>);</span><br><span class="line">	<span class="keyword">return</span> (head);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*bool isinsy(struct student *head, string num)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">	struct student *p;</span></span><br><span class="line"><span class="comment">	p = head;</span></span><br><span class="line"><span class="comment">	bool result = false;</span></span><br><span class="line"><span class="comment">	while (p != NULL)</span></span><br><span class="line"><span class="comment">	&#123;</span></span><br><span class="line"><span class="comment">		if (num == p-&gt;sno)//对应姓名，输出学生信息</span></span><br><span class="line"><span class="comment">		&#123;</span></span><br><span class="line"><span class="comment">			result = true;</span></span><br><span class="line"><span class="comment">			break;</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment">		else//否则指向下一个节点</span></span><br><span class="line"><span class="comment">		&#123;</span></span><br><span class="line"><span class="comment">			p = p-&gt;next;</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	delete p;</span></span><br><span class="line"><span class="comment">	return result;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mymodify</span><span class="params">(struct student *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> num;</span><br><span class="line">	<span class="keyword">char</span> str;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		system(<span class="string">"cls"</span>);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入你想修改的学生信息的学号："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p</span>;</span></span><br><span class="line">		p = head;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">		<span class="keyword">while</span> (p != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (num == p-&gt;sno)<span class="comment">//找到该学生，修改该学生信息</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"找到该学生，请重新输入修改后他（她）的信息："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"学号"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"电话"</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; <span class="string">"学院"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">				<span class="built_in">cin</span> &gt;&gt; p-&gt;sno &gt;&gt; p-&gt;sname &gt;&gt; p-&gt;phone &gt;&gt; p-&gt;collge;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span><span class="comment">//否则指向下一个节点</span></span><br><span class="line">			&#123;</span><br><span class="line">				p = p-&gt;next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (p == <span class="literal">NULL</span>)</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"该学生信息不在系统内"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"是否继续执行修改学生信息的操作？（y/n）："</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; str;</span><br><span class="line">	&#125; <span class="keyword">while</span> (str == <span class="string">'y'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mydelete</span><span class="params">(struct student *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	system(<span class="string">"cls"</span>);</span><br><span class="line">	<span class="keyword">if</span> (head == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"系统中没有录入任何学生的信息"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">string</span> num;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入希望删除信息的学生的学号"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p1</span>,*<span class="title">p2</span>;</span></span><br><span class="line">		p1 = head;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">		<span class="keyword">if</span> (p1-&gt;sno == num)</span><br><span class="line">		&#123;</span><br><span class="line">			head = head-&gt;next;</span><br><span class="line">			<span class="keyword">delete</span> p1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">while</span> (p1 != <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				p2 = p1-&gt;next;</span><br><span class="line">				<span class="keyword">if</span> (p2-&gt;sno == num)</span><br><span class="line">				&#123;</span><br><span class="line">					p1-&gt;next = p2-&gt;next;</span><br><span class="line">					<span class="keyword">delete</span> p2;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					p1 = p1-&gt;next;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1954,7 +1961,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">95</span>
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
