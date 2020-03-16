@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linpeichuang.github.io/"/>
-  <updated>2020-03-15T14:30:41.180Z</updated>
+  <updated>2020-03-16T14:49:32.163Z</updated>
   <id>https://linpeichuang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>graph_DFS_BFS</title>
+    <link href="https://linpeichuang.github.io/2020/03/16/graph/"/>
+    <id>https://linpeichuang.github.io/2020/03/16/graph/</id>
+    <published>2020-03-16T14:48:21.000Z</published>
+    <updated>2020-03-16T14:49:32.163Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="图的遍历（邻接矩阵）"><a href="#图的遍历（邻接矩阵）" class="headerlink" title="图的遍历（邻接矩阵）"></a>图的遍历（邻接矩阵）</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt; </span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> edge[N][N];</span><br><span class="line"><span class="keyword">int</span> n,m;<span class="comment">//n:顶点数，m:边数 </span></span><br><span class="line"><span class="keyword">bool</span> visited[N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;<span class="comment">//递归 </span></span><br><span class="line">visited[v]=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;v&lt;&lt;<span class="string">" "</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(!visited[i]&amp;&amp;edge[v][i]==<span class="number">1</span>)&#123;</span><br><span class="line">DFS(i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS_1</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;<span class="comment">//非递归</span></span><br><span class="line">visited[v]=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;v&lt;&lt;<span class="string">" "</span>; </span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">s.push(v);</span><br><span class="line"><span class="keyword">while</span>(!s.empty())&#123;</span><br><span class="line"><span class="keyword">bool</span> is_push=<span class="literal">false</span>;</span><br><span class="line"><span class="keyword">int</span> top = s.top();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(!visited[i]&amp;&amp;edge[top][i]==<span class="number">1</span>)&#123;</span><br><span class="line">visited[i]=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">s.push(i);</span><br><span class="line">is_push=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(!is_push)&#123;</span><br><span class="line">s.pop();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">q.push(v);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;v&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">visted[v]=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line"><span class="keyword">int</span> front = q.front();</span><br><span class="line">q.pop();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(!visited[i]&amp;&amp;edge[front][i])&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">visited[i]=<span class="literal">true</span>;</span><br><span class="line">q.push(i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a,b;<span class="comment">//a,b分别代表两个相通的顶点 </span></span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">edge[a][b]=edge[b][a]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">DFS(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;图的遍历（邻接矩阵）&quot;&gt;&lt;a href=&quot;#图的遍历（邻接矩阵）&quot; class=&quot;headerlink&quot; title=&quot;图的遍历（邻接矩阵）&quot;&gt;&lt;/a&gt;图的遍历（邻接矩阵）&lt;/h2&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;
+      
+    
+    </summary>
+    
+      <category term="c/c++" scheme="https://linpeichuang.github.io/categories/c-c/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>prime</title>
@@ -439,29 +462,6 @@
       
       
         &lt;h1 id=&quot;7-5-稀疏矩阵加法-20-分&quot;&gt;&lt;a href=&quot;#7-5-稀疏矩阵加法-20-分&quot; class=&quot;headerlink&quot; title=&quot;7-5 稀疏矩阵加法 (20 分)&quot;&gt;&lt;/a&gt;7-5 稀疏矩阵加法 (20 分)&lt;/h1&gt;&lt;p&gt;给定两个矩阵A和B，求其和矩
-      
-    
-    </summary>
-    
-      <category term="未分类" scheme="https://linpeichuang.github.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linear-4</title>
-    <link href="https://linpeichuang.github.io/2019/10/07/linear-4/"/>
-    <id>https://linpeichuang.github.io/2019/10/07/linear-4/</id>
-    <published>2019-10-07T13:45:48.000Z</published>
-    <updated>2019-10-07T14:00:23.689Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="7-4-Tuple-25-分"><a href="#7-4-Tuple-25-分" class="headerlink" title="7-4 Tuple (25 分)"></a>7-4 Tuple (25 分)</h1><p>In Python language, tuple (immutable sequence) is a useful utility, typically used to store all kinds of data, including tuples. The elements in a tuple are separated by a comma, and the tuple can be empty. You can access elements in a tuple by their indices, which are numbered from 0 to M−1 where M is size of the tuple. For the Python code shown below,</p><p>m = (1, 2, (3, 4, (5, 6)), 7, (8, 9), ())<br>n = m[1]<br>s = m[2][1]<br>t = m[2][2][1]<br>u = m[4]<br>the values of n, s, t and u are 2, 4, 6 and (8, 9), respectively.</p><p>Now for your convenience, it is assumed that each element in the tuple is either a positive integer (&lt;=100) or a tuple. Given some groups of indices, for each group you are supposed to get corresponding elements.</p><h2 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h2><p>Each test file contains one test case. The first line of each test case contains a string representing the given tuple, like</p><p>( 1 2 ( 3 4 ( 5 6 ) ) 7 ( 8 9 ) ( ) ).</p><p>Please notice:</p><p>all items in the tuple are displayed inside a pair of parentheses ( );<br>all items in the tuple and right parentheses are displayed with a leading space.<br>The second line contains an integer N (&lt;=100, the number of queries). And then N lines each gives information in the format</p><p>K S<br>​1<br>​​  S<br>​2<br>​​  … S<br>​k<br>​​  ,</p><p>where K is the number of given indices, followed by K integers S<br>​1<br>​​  to S<br>​k<br>​​ . It is guaranteed that all given tuples are valid, and that the total count of integers in the tuple will not exceed 100.</p><h2 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h2><p>For each query, print in a line the corresponding element. If the element is still a tuple, you must print it in the same format as input. And if it cannot be accessed by the given indices, just print ERROR. No extra spaces are allowed at the end of line.</p><h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>( 1 2 ( 3 4 ( 5 6 7 ) 8 ) 9 10 )<br>6<br>1 1<br>2 2 1<br>3 2 2 2<br>2 2 2<br>2 1 0<br>3 2 2 3</p><h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>2<br>4<br>7<br>( 5 6 7 )<br>ERROR<br>ERROR</p><h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;7-4-Tuple-25-分&quot;&gt;&lt;a href=&quot;#7-4-Tuple-25-分&quot; class=&quot;headerlink&quot; title=&quot;7-4 Tuple (25 分)&quot;&gt;&lt;/a&gt;7-4 Tuple (25 分)&lt;/h1&gt;&lt;p&gt;In Python language
       
     
     </summary>
