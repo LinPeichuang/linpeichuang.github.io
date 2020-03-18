@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linpeichuang.github.io/"/>
-  <updated>2020-03-17T15:45:05.242Z</updated>
+  <updated>2020-03-18T15:29:29.440Z</updated>
   <id>https://linpeichuang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode</title>
+    <link href="https://linpeichuang.github.io/2020/03/18/leetcode1/"/>
+    <id>https://linpeichuang.github.io/2020/03/18/leetcode1/</id>
+    <published>2020-03-18T15:24:53.000Z</published>
+    <updated>2020-03-18T15:29:29.440Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Leetcode38-外观数列"><a href="#Leetcode38-外观数列" class="headerlink" title="Leetcode38.外观数列"></a>Leetcode38.外观数列</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">countAndSay</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line">       <span class="built_in">string</span> s=<span class="string">"1"</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span>(i&lt;n)&#123;</span><br><span class="line">           <span class="built_in">string</span> tmp=<span class="string">""</span>;</span><br><span class="line">           <span class="keyword">int</span> num=<span class="number">1</span>;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;s.length();j++)&#123;</span><br><span class="line">               <span class="keyword">if</span>(s[j<span class="number">-1</span>]==s[j])&#123;</span><br><span class="line">                   num++;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="keyword">else</span>&#123;</span><br><span class="line">                   tmp+=to_string(num);</span><br><span class="line">                   tmp+=s[j<span class="number">-1</span>];</span><br><span class="line">                   num=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           tmp+=to_string(num);<span class="comment">//对出现在末尾的连续数字结果尚未保存</span></span><br><span class="line">           tmp+=s[s.length()<span class="number">-1</span>];</span><br><span class="line">           s=tmp;</span><br><span class="line">           i++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> s;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Leetcode38-外观数列&quot;&gt;&lt;a href=&quot;#Leetcode38-外观数列&quot; class=&quot;headerlink&quot; title=&quot;Leetcode38.外观数列&quot;&gt;&lt;/a&gt;Leetcode38.外观数列&lt;/h2&gt;&lt;figure class=&quot;highli
+      
+    
+    </summary>
+    
+      <category term="c/c++" scheme="https://linpeichuang.github.io/categories/c-c/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>graphnew</title>
@@ -439,29 +462,6 @@
       
       
         &lt;h1 id=&quot;7-7-最短连续序列长度-简单穷举-10-分&quot;&gt;&lt;a href=&quot;#7-7-最短连续序列长度-简单穷举-10-分&quot; class=&quot;headerlink&quot; title=&quot;7-7 最短连续序列长度-简单穷举 (10 分)&quot;&gt;&lt;/a&gt;7-7 最短连续序列长度-简单穷举 
-      
-    
-    </summary>
-    
-      <category term="未分类" scheme="https://linpeichuang.github.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linear-6</title>
-    <link href="https://linpeichuang.github.io/2019/10/07/linear-6/"/>
-    <id>https://linpeichuang.github.io/2019/10/07/linear-6/</id>
-    <published>2019-10-07T13:46:25.000Z</published>
-    <updated>2019-10-07T14:07:28.722Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="7-6-【模板】KMP字符串匹配-20-分"><a href="#7-6-【模板】KMP字符串匹配-20-分" class="headerlink" title="7-6 【模板】KMP字符串匹配 (20 分)"></a>7-6 【模板】KMP字符串匹配 (20 分)</h1><p>给出两个字符串text和pattern，其中pattern为text的子串，求出pattern在text中所有出现的位置。</p><p>为了减少骗分的情况，接下来还要输出子串的前缀数组next。</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>第一行为一个字符串，即为text。</p><p>第二行为一个字符串，即为pattern。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>若干行，每行包含一个整数，表示pattern在text中出现的位置。</p><p>接下来1行，包括length(pattern)个整数，表示前缀数组next[i]的值，数据间以一个空格分隔，行尾无多余空格。</p><h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>ABABABC<br>ABA</p><h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>1<br>3<br>0 0 1</p><h2 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明:"></a>样例说明:</h2><p>!(<a href="https://images.ptausercontent.com/05ffd584-7ab1-46eb-b717-79b180eac834.jpg" target="_blank" rel="noopener">https://images.ptausercontent.com/05ffd584-7ab1-46eb-b717-79b180eac834.jpg</a>)</p><p>###代码：</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;7-6-【模板】KMP字符串匹配-20-分&quot;&gt;&lt;a href=&quot;#7-6-【模板】KMP字符串匹配-20-分&quot; class=&quot;headerlink&quot; title=&quot;7-6 【模板】KMP字符串匹配 (20 分)&quot;&gt;&lt;/a&gt;7-6 【模板】KMP字符串匹配 (20 
       
     
     </summary>

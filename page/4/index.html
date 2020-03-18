@@ -310,6 +310,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/03/17/74天/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Clin">
+      <meta itemprop="description" content="Clin的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Clin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/17/74天/" itemprop="url">
+                  74天
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-17 23:02:24 / Modified: 23:05:14" itemprop="dateCreated datePublished" datetime="2019-03-17T23:02:24+08:00">2019-03-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="c-界面"><a href="#c-界面" class="headerlink" title="c++界面"></a>c++界面</h2><p>window.h<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//窗口过程</span></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND, UINT, WPARAM, LPARAM)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> WINAPI <span class="title">WinMain</span><span class="params">(HINSTANCE hInstance,</span></span></span><br><span class="line"><span class="function"><span class="params">	HINSTANCE hPrevInstance,</span></span></span><br><span class="line"><span class="function"><span class="params">	LPSTR lpszCmdLine,</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="keyword">int</span> nCmdShow)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	HWND hwnd;<span class="comment">//窗口句柄</span></span><br><span class="line">	MSG msg;<span class="comment">//消息</span></span><br><span class="line">	WNDCLASS wc;<span class="comment">//窗口类</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//1、设计一个窗口类</span></span><br><span class="line">	wc.style = <span class="number">0</span>;</span><br><span class="line">	wc.lpfnWndProc = (WNDPROC)WndProc;</span><br><span class="line">	wc.cbClsExtra = <span class="number">0</span>;</span><br><span class="line">	wc.cbWndExtra = <span class="number">0</span>;</span><br><span class="line">	wc.hInstance = hInstance;</span><br><span class="line">	wc.hIcon = LoadIcon(<span class="literal">NULL</span>, IDI_WINLOGO);</span><br><span class="line">	wc.hCursor = LoadCursor(<span class="literal">NULL</span>, IDC_ARROW);</span><br><span class="line">	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW+<span class="number">1</span>);</span><br><span class="line">	wc.lpszMenuName = <span class="literal">NULL</span>;</span><br><span class="line">	wc.lpszClassName = <span class="string">"MyWndname"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//2、注册窗口类</span></span><br><span class="line">	RegisterClass(&amp;wc);</span><br><span class="line">	<span class="comment">//3、创建窗口</span></span><br><span class="line">	hwnd = CreateWindow(</span><br><span class="line">		TEXT(<span class="string">"MyWndname"</span>),</span><br><span class="line">		TEXT(<span class="string">"Hello SDK Application"</span>),</span><br><span class="line">		WS_OVERLAPPEDWINDOW,</span><br><span class="line">		CW_USEDEFAULT,</span><br><span class="line">		CW_USEDEFAULT,</span><br><span class="line">		CW_USEDEFAULT,</span><br><span class="line">		CW_USEDEFAULT,</span><br><span class="line">		<span class="literal">NULL</span>,<span class="comment">//父窗口句柄</span></span><br><span class="line">		<span class="literal">NULL</span>,<span class="comment">//窗口菜单句柄</span></span><br><span class="line">		hInstance,</span><br><span class="line">		<span class="literal">NULL</span>);</span><br><span class="line">	<span class="comment">//4、显示和更新窗口</span></span><br><span class="line">	ShowWindow(hwnd, nCmdShow);</span><br><span class="line">	UpdateWindow(hwnd);</span><br><span class="line">	<span class="comment">//5、消息循环</span></span><br><span class="line">	<span class="keyword">while</span> (GetMessage(&amp;msg, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">		TranslateMessage(&amp;msg);</span><br><span class="line">		DispatchMessage(&amp;msg);<span class="comment">//转发到窗口过程</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> msg.wParam;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hwnd,</span></span></span><br><span class="line"><span class="function"><span class="params">	UINT message,</span></span></span><br><span class="line"><span class="function"><span class="params">	WPARAM wParam,</span></span></span><br><span class="line"><span class="function"><span class="params">	LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PAINTSTRUCT ps;</span><br><span class="line">	HDC hdc;<span class="comment">//DC句柄</span></span><br><span class="line">	RECT rect;</span><br><span class="line">	<span class="comment">//对各种消息进行处理</span></span><br><span class="line">	<span class="keyword">switch</span> (message)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> WM_LBUTTONDOWN:</span><br><span class="line">		PostQuitMessage(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">case</span> WM_PAINT:<span class="comment">//绘制消息</span></span><br><span class="line">		hdc = BeginPaint(hwnd, &amp;ps);</span><br><span class="line">		GetClientRect(hwnd, &amp;rect);</span><br><span class="line">		Ellipse(hdc, <span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">100</span>);</span><br><span class="line">		DrawText(hdc, TEXT(<span class="string">"Hello Windows!"</span>), <span class="number">-1</span>, &amp;rect,</span><br><span class="line">			DT_SINGLELINE | DT_CENTER | DT_VCENTER);</span><br><span class="line">		EndPaint(hwnd, &amp;ps);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">case</span> WM_DESTROY:<span class="comment">//销毁窗口消息（关闭）</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> DefWindowProc(hwnd, message, wParam, lParam);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/03/13/73天/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1710,164 +1868,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://linpeichuang.github.io/2019/02/28/63day/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Clin">
-      <meta itemprop="description" content="Clin的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Clin">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/28/63day/" itemprop="url">
-                  63day
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-28 23:13:55 / Modified: 23:19:14" itemprop="dateCreated datePublished" datetime="2019-02-28T23:13:55+08:00">2019-02-28</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="离开她的第15天"><a href="#离开她的第15天" class="headerlink" title="离开她的第15天"></a>离开她的第15天</h2><h1 id="复习寒假学习的python"><a href="#复习寒假学习的python" class="headerlink" title="复习寒假学习的python"></a>复习寒假学习的python</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    currency_str_value = input(<span class="string">'请输入货币金额（带单位）：'</span>)</span><br><span class="line">    USD_VS_RMB = <span class="number">6.77</span></span><br><span class="line">    unit = currency_str_value[<span class="number">-3</span>:]</span><br><span class="line">    money_value = eval(currency_str_value[:<span class="number">-3</span>])</span><br><span class="line">    <span class="keyword">if</span> unit == <span class="string">'CYN'</span>:</span><br><span class="line">       exchange_rate = <span class="number">1</span> / USD_VS_RMB</span><br><span class="line">    <span class="keyword">elif</span> unit == <span class="string">'USD'</span>:</span><br><span class="line">        exchange_rate = USD_VS_RMB</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        exchange_rate = USD_VS_RMB</span><br><span class="line">    <span class="keyword">if</span> exchange_rate != <span class="number">1</span>:</span><br><span class="line">        convert_currency2 = <span class="keyword">lambda</span> x: x * exchange_rate</span><br><span class="line">        out_money = convert_currency2(money_value)</span><br><span class="line">        print(<span class="string">"转换后的金额为："</span>, out_money)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"该版本暂不支持该类型金币"</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	<span class="title">print</span><span class="params">(<span class="string">"&#123;0:*^30&#125;"</span>.format<span class="params">(<span class="string">"请输入以下信息，并用空格分隔"</span>)</span>)</span></span></span><br><span class="line">	input_str = input("性别，身高（cm），体重(kg)，年龄 ")</span><br><span class="line">	imformation = input_str.split(<span class="string">' '</span>)</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		index = imformation[<span class="number">0</span>]</span><br><span class="line">		height = float(imformation[<span class="number">1</span>])</span><br><span class="line">		weight = float(imformation[<span class="number">2</span>])</span><br><span class="line">		age = int(imformation[<span class="number">3</span>])</span><br><span class="line">		<span class="keyword">if</span> index == <span class="string">'男'</span>:</span><br><span class="line">			brm = (<span class="number">13.7</span> * weight) + (<span class="number">5.0</span> * height) - (<span class="number">6.8</span> * age) + <span class="number">66</span></span><br><span class="line">		<span class="keyword">elif</span> index == <span class="string">'女'</span>:</span><br><span class="line">			brm = (<span class="number">9.6</span> * weight) + (<span class="number">1.8</span> * height) - (<span class="number">4.7</span> * age) + <span class="number">655</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			brm = <span class="number">-1</span></span><br><span class="line">		<span class="keyword">if</span> brm != <span class="number">-1</span>:</span><br><span class="line">			print(<span class="string">"您的brm为：&#123;&#125;大卡"</span>.format(brm))</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(<span class="string">"该版本不支持该性别"</span>)</span><br><span class="line">	<span class="keyword">except</span> ValueError:</span><br><span class="line">		print(<span class="string">"请输入正确的数值"</span>)</span><br><span class="line">	<span class="keyword">except</span> IndexError:</span><br><span class="line">		print(<span class="string">"输入信息太短"</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1917,7 +1917,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">98</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
