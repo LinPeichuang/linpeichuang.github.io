@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lincx_py.gitee.io/"/>
-  <updated>2020-03-22T15:12:04.515Z</updated>
+  <updated>2020-03-26T14:50:23.401Z</updated>
   <id>https://lincx_py.gitee.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM-let4</title>
+    <link href="https://lincx_py.gitee.io/2020/03/26/ACM-let4/"/>
+    <id>https://lincx_py.gitee.io/2020/03/26/ACM-let4/</id>
+    <published>2020-03-26T14:47:35.000Z</published>
+    <updated>2020-03-26T14:50:23.401Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ZOJ1002–Fire-Net"><a href="#ZOJ1002–Fire-Net" class="headerlink" title="ZOJ1002–Fire Net"></a>ZOJ1002–Fire Net</h2><p>Suppose that we have a square city with straight streets. A map of a city is a square board with n rows and n columns, each representing a street or a piece of wall.</p><p>A blockhouse is a small castle that has four openings through which to shoot. The four openings are facing North, East, South, and West, respectively. There will be one machine gun shooting through each opening.</p><p>Here we assume that a bullet is so powerful that it can run across any distance and destroy a blockhouse on its way. On the other hand, a wall is so strongly built that can stop the bullets.</p><p>The goal is to place as many blockhouses in a city as possible so that no two can destroy each other. A configuration of blockhouses is legal provided that no two blockhouses are on the same horizontal row or vertical column in a map unless there is at least one wall separating them. In this problem we will consider small square cities (at most 4x4) that contain walls through which bullets cannot run through.</p><p>The following image shows five pictures of the same board. The first picture is the empty board, the second and third pictures show legal configurations, and the fourth and fifth pictures show illegal configurations. For this board, the maximum number of blockhouses in a legal configuration is 5; the second picture shows one way to do it, but there are several other ways.</p><p>Your task is to write a program that, given a description of a map, calculates the maximum number of blockhouses that can be placed in the city in a legal configuration.</p><p>The input file contains one or more map descriptions, followed by a line containing the number 0 that signals the end of the file. Each map description begins with a line containing a positive integer n that is the size of the city; n will be at most 4. The next n lines each describe one row of the map, with a ‘.’ indicating an open space and an uppercase ‘X’ indicating a wall. There are no spaces in the input file.</p><p>For each test case, output one line containing the maximum number of blockhouses that can be placed in the city in a legal configuration.</p><h3 id="Sample-input"><a href="#Sample-input" class="headerlink" title="Sample input:"></a>Sample input:</h3><p>4<br>.X..<br>….<br>XX..<br>….<br>2<br>XX<br>.X<br>3<br>.X.<br>X.X<br>.X.<br>3<br>…<br>.XX<br>.XX<br>4<br>….<br>….<br>….<br>….<br>0</p><h3 id="Sample-output"><a href="#Sample-output" class="headerlink" title="Sample output:"></a>Sample output:</h3><p>5<br>1<br>5<br>2<br>4</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> maxlen;</span><br><span class="line"><span class="keyword">int</span> n,nlen;</span><br><span class="line"><span class="keyword">char</span> <span class="built_in">map</span>[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Legal</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="comment">//检查列合法性</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i= x<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">map</span>[i][y]==<span class="string">'O'</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">map</span>[i][y]==<span class="string">'X'</span>)<span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//检查行合法性</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=y<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">map</span>[x][i]==<span class="string">'O'</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">map</span>[x][i]==<span class="string">'X'</span>)<span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> nlen)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(k==n*n)&#123;<span class="comment">//搜索完成</span></span><br><span class="line">        <span class="keyword">if</span>(maxlen&lt;nlen)&#123;</span><br><span class="line">            maxlen=nlen;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x=k/n;</span><br><span class="line">        <span class="keyword">int</span> y=k%n;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">map</span>[x][y]==<span class="string">'.'</span>&amp;&amp;Legal(x,y))&#123;</span><br><span class="line">            <span class="built_in">map</span>[x][y]=<span class="string">'O'</span>;<span class="comment">//标记为碉堡</span></span><br><span class="line">            DFS(k+<span class="number">1</span>,nlen+<span class="number">1</span>);<span class="comment">//碉堡数加一</span></span><br><span class="line">            <span class="built_in">map</span>[x][y]=<span class="string">'.'</span>;<span class="comment">//搜索完了，复原</span></span><br><span class="line">        &#125;</span><br><span class="line">        DFS(k+<span class="number">1</span>,nlen);<span class="comment">//这个点(x,y)是墙或者不合法，搜索下一个；</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        maxlen=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;<span class="built_in">map</span>[i];</span><br><span class="line">        &#125;</span><br><span class="line">        DFS(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;maxlen&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;ZOJ1002–Fire-Net&quot;&gt;&lt;a href=&quot;#ZOJ1002–Fire-Net&quot; class=&quot;headerlink&quot; title=&quot;ZOJ1002–Fire Net&quot;&gt;&lt;/a&gt;ZOJ1002–Fire Net&lt;/h2&gt;&lt;p&gt;Suppose that w
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="https://lincx_py.gitee.io/categories/ACM/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>拓扑排序</title>
@@ -446,29 +469,6 @@
       
         &lt;h1 id=&quot;7-11-栈-20-分&quot;&gt;&lt;a href=&quot;#7-11-栈-20-分&quot; class=&quot;headerlink&quot; title=&quot;7-11 栈 (20 分)&quot;&gt;&lt;/a&gt;7-11 栈 (20 分)&lt;/h1&gt;&lt;p&gt;我们知道平凡的栈有几个操作:&lt;/p&gt;
 &lt;p&gt;push(val
-      
-    
-    </summary>
-    
-      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linear-10</title>
-    <link href="https://lincx_py.gitee.io/2019/10/07/linear-10/"/>
-    <id>https://lincx_py.gitee.io/2019/10/07/linear-10/</id>
-    <published>2019-10-07T13:55:31.000Z</published>
-    <updated>2019-10-07T13:57:38.189Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="7-10-迷宫寻路-20-分"><a href="#7-10-迷宫寻路-20-分" class="headerlink" title="7-10 迷宫寻路 (20 分)"></a>7-10 迷宫寻路 (20 分)</h1><p>给定一个M行N列的迷宫图，其中 “0”表示可通路，”1”表示障碍物，无法通行。在迷宫中只允许在水平或上下四个方向的通路上行走，走过的位置不能重复走。</p><p>5行8列的迷宫如下：</p><p>0 1 1 1 0 0 0 0<br>0 0 0 1 0 0 0 0<br>0 1 0 0 0 1 0 0<br>0 1 1 1 0 1 1 0<br>1 0 0 0 0 0 0 0<br>则从左上角（1，1）至右下角（5，8）的最短路径为：</p><p>1,1–》2,1–》2,2–》2,3–》3,3–》3,4–》3,5–》4,5–》5,5–》5,6–》5,7–》5,8</p><p>题目保证每个迷宫最多只有一条最短路径。</p><p>请输出该条最短路径，如果不存在任何通路，则输出”NO FOUND”.</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>第一行，输入M和N值，表示迷宫行数和列数。</p><p>接着输入M行数值，其中，0表示通路，1表示障碍物。每列数值用空格符间隔。</p><p>接下来可能输入多组迷宫数据。</p><p>当输入M的值为-1时结束输入。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>按行顺序输出路径的每个位置的行数和列数，如 x,y</p><p>如果不存在任何路径，则输出”NO FOUND”.</p><p>每组迷宫寻路结果用换行符间隔。</p><h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><p>在这里给出一组迷宫。例如：</p><p>8 8<br>0 0 1 0 0 0 1 0<br>0 0 1 0 0 0 1 0<br>0 0 0 0 1 1 0 0<br>0 1 1 1 0 0 0 0<br>0 0 0 1 0 0 0 0<br>0 1 0 0 0 1 0 0<br>0 1 1 1 0 1 1 0<br>1 0 0 0 0 0 0 0<br>4 4<br>0 0 1 0<br>0 0 0 0<br>0 0 1 1<br>0 1 0 0<br>-1 -1</p><h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><p>在这里给出相应的输出。例如：</p><p>1,1<br>2,1<br>3,1<br>4,1<br>5,1<br>5,2<br>5,3<br>6,3<br>6,4<br>6,5<br>7,5<br>8,5<br>8,6<br>8,7<br>8,8</p><p>NO FOUND</p><h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;7-10-迷宫寻路-20-分&quot;&gt;&lt;a href=&quot;#7-10-迷宫寻路-20-分&quot; class=&quot;headerlink&quot; title=&quot;7-10 迷宫寻路 (20 分)&quot;&gt;&lt;/a&gt;7-10 迷宫寻路 (20 分)&lt;/h1&gt;&lt;p&gt;给定一个M行N列的迷宫图，其中 “0
       
     
     </summary>
