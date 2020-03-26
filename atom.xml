@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Clin</title>
+  <title>lincx_py</title>
   
-  <subtitle>Clin的博客</subtitle>
+  <subtitle>lincx_py的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lincx_py.gitee/"/>
+  <link href="https://lincx_py.gitee.io/"/>
   <updated>2020-03-22T15:12:04.515Z</updated>
-  <id>https://lincx_py.gitee/</id>
+  <id>https://lincx_py.gitee.io/</id>
   
   <author>
-    <name>Clin</name>
+    <name>lincx_py</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>拓扑排序</title>
-    <link href="https://lincx_py.gitee/2020/03/22/tuopu/"/>
-    <id>https://lincx_py.gitee/2020/03/22/tuopu/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/22/tuopu/"/>
+    <id>https://lincx_py.gitee.io/2020/03/22/tuopu/</id>
     <published>2020-03-22T15:10:55.000Z</published>
     <updated>2020-03-22T15:12:04.515Z</updated>
     
@@ -34,15 +34,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>huffman</title>
-    <link href="https://lincx_py.gitee/2020/03/20/huffman/"/>
-    <id>https://lincx_py.gitee/2020/03/20/huffman/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/20/huffman/"/>
+    <id>https://lincx_py.gitee.io/2020/03/20/huffman/</id>
     <published>2020-03-20T14:33:25.000Z</published>
     <updated>2020-03-24T14:26:36.118Z</updated>
     
@@ -57,15 +57,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>ACM_lect3</title>
-    <link href="https://lincx_py.gitee/2020/03/19/Acm-lect3/"/>
-    <id>https://lincx_py.gitee/2020/03/19/Acm-lect3/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/19/Acm-lect3/"/>
+    <id>https://lincx_py.gitee.io/2020/03/19/Acm-lect3/</id>
     <published>2020-03-19T14:21:48.000Z</published>
     <updated>2020-03-19T14:24:56.115Z</updated>
     
@@ -80,15 +80,15 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://lincx_py.gitee/categories/ACM/"/>
+      <category term="ACM" scheme="https://lincx_py.gitee.io/categories/ACM/"/>
     
     
   </entry>
   
   <entry>
     <title>leetcode</title>
-    <link href="https://lincx_py.gitee/2020/03/18/leetcode1/"/>
-    <id>https://lincx_py.gitee/2020/03/18/leetcode1/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/18/leetcode1/"/>
+    <id>https://lincx_py.gitee.io/2020/03/18/leetcode1/</id>
     <published>2020-03-18T15:24:53.000Z</published>
     <updated>2020-03-18T15:29:29.440Z</updated>
     
@@ -103,15 +103,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>graphnew</title>
-    <link href="https://lincx_py.gitee/2020/03/17/graphnew/"/>
-    <id>https://lincx_py.gitee/2020/03/17/graphnew/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/17/graphnew/"/>
+    <id>https://lincx_py.gitee.io/2020/03/17/graphnew/</id>
     <published>2020-03-17T15:03:55.000Z</published>
     <updated>2020-03-17T15:45:05.242Z</updated>
     
@@ -126,15 +126,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>graph_DFS_BFS</title>
-    <link href="https://lincx_py.gitee/2020/03/16/graph/"/>
-    <id>https://lincx_py.gitee/2020/03/16/graph/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/16/graph/"/>
+    <id>https://lincx_py.gitee.io/2020/03/16/graph/</id>
     <published>2020-03-16T14:48:21.000Z</published>
     <updated>2020-03-17T15:44:14.693Z</updated>
     
@@ -149,15 +149,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>prime</title>
-    <link href="https://lincx_py.gitee/2020/03/15/prime/"/>
-    <id>https://lincx_py.gitee/2020/03/15/prime/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/15/prime/"/>
+    <id>https://lincx_py.gitee.io/2020/03/15/prime/</id>
     <published>2020-03-15T14:29:09.000Z</published>
     <updated>2020-03-15T14:30:41.180Z</updated>
     
@@ -172,15 +172,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>KMP</title>
-    <link href="https://lincx_py.gitee/2020/03/14/KMP/"/>
-    <id>https://lincx_py.gitee/2020/03/14/KMP/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/14/KMP/"/>
+    <id>https://lincx_py.gitee.io/2020/03/14/KMP/</id>
     <published>2020-03-14T10:09:10.000Z</published>
     <updated>2020-03-14T10:10:42.039Z</updated>
     
@@ -195,15 +195,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>二叉树的建立以及遍历</title>
-    <link href="https://lincx_py.gitee/2020/03/13/binarytree/"/>
-    <id>https://lincx_py.gitee/2020/03/13/binarytree/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/13/binarytree/"/>
+    <id>https://lincx_py.gitee.io/2020/03/13/binarytree/</id>
     <published>2020-03-13T14:53:14.000Z</published>
     <updated>2020-03-13T14:55:07.532Z</updated>
     
@@ -218,15 +218,15 @@
     
     </summary>
     
-      <category term="c/c++" scheme="https://lincx_py.gitee/categories/c-c/"/>
+      <category term="c/c++" scheme="https://lincx_py.gitee.io/categories/c-c/"/>
     
     
   </entry>
   
   <entry>
     <title>springboot</title>
-    <link href="https://lincx_py.gitee/2020/03/13/springboot/"/>
-    <id>https://lincx_py.gitee/2020/03/13/springboot/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/13/springboot/"/>
+    <id>https://lincx_py.gitee.io/2020/03/13/springboot/</id>
     <published>2020-03-13T02:03:48.000Z</published>
     <updated>2020-03-13T02:05:36.736Z</updated>
     
@@ -241,15 +241,15 @@
     
     </summary>
     
-      <category term="java" scheme="https://lincx_py.gitee/categories/java/"/>
+      <category term="java" scheme="https://lincx_py.gitee.io/categories/java/"/>
     
     
   </entry>
   
   <entry>
     <title>使用go语言并发爬电影/照片</title>
-    <link href="https://lincx_py.gitee/2020/03/12/goscrapy/"/>
-    <id>https://lincx_py.gitee/2020/03/12/goscrapy/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/12/goscrapy/"/>
+    <id>https://lincx_py.gitee.io/2020/03/12/goscrapy/</id>
     <published>2020-03-12T14:35:21.000Z</published>
     <updated>2020-03-12T14:38:02.442Z</updated>
     
@@ -264,15 +264,15 @@
     
     </summary>
     
-      <category term="go" scheme="https://lincx_py.gitee/categories/go/"/>
+      <category term="go" scheme="https://lincx_py.gitee.io/categories/go/"/>
     
     
   </entry>
   
   <entry>
     <title>ACM_let2</title>
-    <link href="https://lincx_py.gitee/2020/03/12/ACM-let2/"/>
-    <id>https://lincx_py.gitee/2020/03/12/ACM-let2/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/12/ACM-let2/"/>
+    <id>https://lincx_py.gitee.io/2020/03/12/ACM-let2/</id>
     <published>2020-03-12T10:23:32.000Z</published>
     <updated>2020-03-12T10:30:27.205Z</updated>
     
@@ -287,15 +287,15 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://lincx_py.gitee/categories/ACM/"/>
+      <category term="ACM" scheme="https://lincx_py.gitee.io/categories/ACM/"/>
     
     
   </entry>
   
   <entry>
     <title>ACM_let1</title>
-    <link href="https://lincx_py.gitee/2020/03/12/ACM-let1/"/>
-    <id>https://lincx_py.gitee/2020/03/12/ACM-let1/</id>
+    <link href="https://lincx_py.gitee.io/2020/03/12/ACM-let1/"/>
+    <id>https://lincx_py.gitee.io/2020/03/12/ACM-let1/</id>
     <published>2020-03-12T09:42:49.000Z</published>
     <updated>2020-03-12T09:45:15.934Z</updated>
     
@@ -311,15 +311,15 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://lincx_py.gitee/categories/ACM/"/>
+      <category term="ACM" scheme="https://lincx_py.gitee.io/categories/ACM/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-16</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-16/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-16/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-16/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-16/</id>
     <published>2019-10-07T14:23:14.000Z</published>
     <updated>2019-10-07T14:24:46.055Z</updated>
     
@@ -334,15 +334,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-15</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-15/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-15/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-15/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-15/</id>
     <published>2019-10-07T14:20:25.000Z</published>
     <updated>2019-10-07T14:23:00.045Z</updated>
     
@@ -357,15 +357,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-14</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-14/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-14/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-14/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-14/</id>
     <published>2019-10-07T14:16:42.000Z</published>
     <updated>2019-10-07T14:17:58.576Z</updated>
     
@@ -380,15 +380,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-13</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-13/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-13/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-13/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-13/</id>
     <published>2019-10-07T14:14:16.000Z</published>
     <updated>2019-10-07T14:15:48.430Z</updated>
     
@@ -403,15 +403,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-12</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-12/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-12/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-12/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-12/</id>
     <published>2019-10-07T14:12:07.000Z</published>
     <updated>2019-10-07T14:13:39.788Z</updated>
     
@@ -426,15 +426,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-11</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-11/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-11/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-11/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-11/</id>
     <published>2019-10-07T14:09:34.000Z</published>
     <updated>2019-10-07T14:10:43.171Z</updated>
     
@@ -450,15 +450,15 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>linear-10</title>
-    <link href="https://lincx_py.gitee/2019/10/07/linear-10/"/>
-    <id>https://lincx_py.gitee/2019/10/07/linear-10/</id>
+    <link href="https://lincx_py.gitee.io/2019/10/07/linear-10/"/>
+    <id>https://lincx_py.gitee.io/2019/10/07/linear-10/</id>
     <published>2019-10-07T13:55:31.000Z</published>
     <updated>2019-10-07T13:57:38.189Z</updated>
     
@@ -473,7 +473,7 @@
     
     </summary>
     
-      <category term="未分类" scheme="https://lincx_py.gitee/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://lincx_py.gitee.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
