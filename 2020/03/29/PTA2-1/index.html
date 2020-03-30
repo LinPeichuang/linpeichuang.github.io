@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。 输入格式:输入的第一行包含两个整数n和k（1≤n≤10">
+  <meta name="description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。">
 <meta name="keywords" content="作业">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PTA">
 <meta property="og:url" content="https://lincx_py.gitee.io/2020/03/29/PTA2-1/index.html">
 <meta property="og:site_name" content="lincx_py">
-<meta property="og:description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。 输入格式:输入的第一行包含两个整数n和k（1≤n≤10">
+<meta property="og:description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-29T15:40:46.695Z">
+<meta property="og:updated_time" content="2020-03-30T11:52:56.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PTA">
-<meta name="twitter:description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。 输入格式:输入的第一行包含两个整数n和k（1≤n≤10">
+<meta name="twitter:description" content="归纳法2-3 排列还原牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&amp;lt; j且A[i]&amp;lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。">
 
 
 
@@ -353,12 +353,24 @@
                 
               
 
-              <time title="Created: 2020-03-29 23:28:09 / Modified: 23:40:46" itemprop="dateCreated datePublished" datetime="2020-03-29T23:28:09+08:00">2020-03-29</time>
+              <time title="Created: 2020-03-29 23:28:09" itemprop="dateCreated datePublished" datetime="2020-03-29T23:28:09+08:00">2020-03-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-03-30 19:52:56" itemprop="dateModified" datetime="2020-03-30T19:52:56+08:00">2020-03-30</time>
               
             
           </span>
@@ -419,7 +431,7 @@
       
 
       
-        <h2 id="归纳法"><a href="#归纳法" class="headerlink" title="归纳法"></a>归纳法</h2><h3 id="2-3-排列还原"><a href="#2-3-排列还原" class="headerlink" title="2-3 排列还原"></a>2-3 排列还原</h3><p>牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&lt; j且A[i]&lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。</p>
+        <h2 id="归纳法"><a href="#归纳法" class="headerlink" title="归纳法"></a>归纳法</h2><h3 id="2-3-排列还原"><a href="#2-3-排列还原" class="headerlink" title="2-3 排列还原"></a>2-3 排列还原</h3><p>牛牛的作业簿上有一个长度为n的排列A[1…n]，这个排列包含了从1到n的n个数，但是因为某种原因，其中有一些位置（不超过10个）看不清了，但是牛牛记得这个排列的顺序对的数量是k，顺序对是指满足i&lt; j且A[i]&lt; A[j]的对数。请帮助牛牛计算出符合要求的排列数目。输入n,k与序列A，返回可能的存在排列数目。<br><a id="more"></a></p>
 <p><strong><em>输入格式:</em></strong><br>输入的第一行包含两个整数n和k（1≤n≤100,1≤k≤n(n−1)/2），接下来的一行，包含n个数字表示排列A，其中等于0的项表示看不清的位置（不超过10个）。</p>
 <p><strong><em>输出格式:</em></strong><br>输出一行表示合法排列的数目。</p>
 <p><strong><em>输入样例:</em></strong><br>5 5<br>4 0 0 2 0</p>
