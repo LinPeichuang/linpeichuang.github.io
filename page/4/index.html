@@ -310,6 +310,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/10/07/linear-4/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lincx_py">
+      <meta itemprop="description" content="lincx_py的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lincx_py">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/07/linear-4/" itemprop="url">
+                  linear-4
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-07 21:45:48 / Modified: 22:00:23" itemprop="dateCreated datePublished" datetime="2019-10-07T21:45:48+08:00">2019-10-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="7-4-Tuple-25-分"><a href="#7-4-Tuple-25-分" class="headerlink" title="7-4 Tuple (25 分)"></a>7-4 Tuple (25 分)</h1><p>In Python language, tuple (immutable sequence) is a useful utility, typically used to store all kinds of data, including tuples. The elements in a tuple are separated by a comma, and the tuple can be empty. You can access elements in a tuple by their indices, which are numbered from 0 to M−1 where M is size of the tuple. For the Python code shown below,</p>
+<p>m = (1, 2, (3, 4, (5, 6)), 7, (8, 9), ())<br>n = m[1]<br>s = m[2][1]<br>t = m[2][2][1]<br>u = m[4]<br>the values of n, s, t and u are 2, 4, 6 and (8, 9), respectively.</p>
+<p>Now for your convenience, it is assumed that each element in the tuple is either a positive integer (&lt;=100) or a tuple. Given some groups of indices, for each group you are supposed to get corresponding elements.</p>
+<h2 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h2><p>Each test file contains one test case. The first line of each test case contains a string representing the given tuple, like</p>
+<p>( 1 2 ( 3 4 ( 5 6 ) ) 7 ( 8 9 ) ( ) ).</p>
+<p>Please notice:</p>
+<p>all items in the tuple are displayed inside a pair of parentheses ( );<br>all items in the tuple and right parentheses are displayed with a leading space.<br>The second line contains an integer N (&lt;=100, the number of queries). And then N lines each gives information in the format</p>
+<p>K S<br>​1<br>​​  S<br>​2<br>​​  … S<br>​k<br>​​  ,</p>
+<p>where K is the number of given indices, followed by K integers S<br>​1<br>​​  to S<br>​k<br>​​ . It is guaranteed that all given tuples are valid, and that the total count of integers in the tuple will not exceed 100.</p>
+<h2 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h2><p>For each query, print in a line the corresponding element. If the element is still a tuple, you must print it in the same format as input. And if it cannot be accessed by the given indices, just print ERROR. No extra spaces are allowed at the end of line.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>( 1 2 ( 3 4 ( 5 6 7 ) 8 ) 9 10 )<br>6<br>1 1<br>2 2 1<br>3 2 2 2<br>2 2 2<br>2 1 0<br>3 2 2 3</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>2<br>4<br>7<br>( 5 6 7 )<br>ERROR<br>ERROR</p>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/10/07/linear-3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1755,163 +1924,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/03/13/72天/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lincx_py">
-      <meta itemprop="description" content="lincx_py的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lincx_py">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/13/72天/" itemprop="url">
-                  72天
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-13 12:39:51 / Modified: 12:42:38" itemprop="dateCreated datePublished" datetime="2019-03-13T12:39:51+08:00">2019-03-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><h1 id="书上的题目"><a href="#书上的题目" class="headerlink" title="书上的题目"></a>书上的题目</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">enum</span> weekday&#123;Sunday=<span class="number">7</span>,Monday=<span class="number">1</span>,Tuesday,Wednesday,Thurday,Friday,Saturday&#125;day;</span><br><span class="line">	<span class="keyword">char</span> ch=<span class="string">'A'</span>;</span><br><span class="line">	<span class="keyword">int</span> a, b, c, d, e, f, g, i;<span class="comment">//a~g分别用于表示A~G医生值夜班对应的星期，i用于控制输出次数</span></span><br><span class="line">	f = Thurday;<span class="comment">//F医生周四晚值班</span></span><br><span class="line">	<span class="keyword">for</span> (c = f+<span class="number">1</span>; c &lt;= Saturday; c++)<span class="comment">//由题可知C医生排班在F医生后且在A医生前</span></span><br><span class="line">	&#123;</span><br><span class="line">		a = c + <span class="number">1</span>;<span class="comment">//A医生比C医生晚一天</span></span><br><span class="line">		<span class="keyword">for</span> (b = Monday; b &lt;= f<span class="number">-1</span>&amp;&amp;b != a; b++)<span class="comment">//遍历B医生的值班星期数</span></span><br><span class="line">		&#123;</span><br><span class="line">			g = b + <span class="number">3</span>;</span><br><span class="line">			<span class="keyword">if</span>(g!=a&amp;&amp;g!=c&amp;&amp;g!=f)</span><br><span class="line">			&#123;   </span><br><span class="line">				<span class="keyword">for</span> (e = Monday; e &lt; Sunday&amp;&amp;e != a &amp;&amp; e != b &amp;&amp; e != c &amp;&amp; e != f&amp;&amp;e!=g; e++)<span class="comment">//遍历E医生的值班星期数</span></span><br><span class="line">				&#123;</span><br><span class="line">					d = e + <span class="number">2</span>;<span class="comment">//D医生比E医生晚两个晚上</span></span><br><span class="line">					<span class="keyword">if</span> (d != a &amp;&amp; d != b &amp;&amp; d != c &amp;&amp; d != f&amp;&amp;d!=g)<span class="comment">//判断是否全部符合题意</span></span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= <span class="number">7</span>; i++)</span><br><span class="line">						&#123;</span><br><span class="line">							<span class="built_in">cout</span> &lt;&lt; <span class="keyword">char</span>(ch + i - <span class="number">1</span>) &lt;&lt; <span class="string">" : "</span>;</span><br><span class="line">							<span class="keyword">switch</span> (i)<span class="comment">//每控制个医生对应各自值班的星期数</span></span><br><span class="line">							&#123;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">1</span>:day = weekday(a); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">2</span>:day = weekday(b); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">3</span>:day = weekday(c); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">4</span>:day = weekday(d); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">5</span>:day = weekday(e); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">6</span>:day = weekday(f); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">7</span>:day = weekday(g); <span class="keyword">break</span>;</span><br><span class="line">							&#125;</span><br><span class="line">							<span class="keyword">switch</span> (day)<span class="comment">//输出排班结果</span></span><br><span class="line">							&#123;</span><br><span class="line">							<span class="keyword">case</span> Monday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Monday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Tuesday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Tuesday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Wednesday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Wednesday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Thurday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Thurday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Friday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Friday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Saturday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Saturday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Sunday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Sunday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1961,7 +1973,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">105</span>
+                    <span class="site-state-item-count">106</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

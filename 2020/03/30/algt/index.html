@@ -108,17 +108,18 @@
 
 
 
-  <meta name="description" content="python 类的学习class123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687class PasswordTool:">
+  <meta name="description" content="问题–出栈序列N个元素依次进栈，则出栈有多少种序列">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="64and65">
-<meta property="og:url" content="https://lincx_py.gitee.io/2019/03/02/64and65/index.html">
+<meta property="og:title" content="algorithm-lect">
+<meta property="og:url" content="https://lincx_py.gitee.io/2020/03/30/algt/index.html">
 <meta property="og:site_name" content="lincx_py">
-<meta property="og:description" content="python 类的学习class123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687class PasswordTool:">
+<meta property="og:description" content="问题–出栈序列N个元素依次进栈，则出栈有多少种序列">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-02T15:10:55.110Z">
+<meta property="og:updated_time" content="2020-03-30T15:18:55.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="64and65">
-<meta name="twitter:description" content="python 类的学习class123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687class PasswordTool:">
+<meta name="twitter:title" content="algorithm-lect">
+<meta name="twitter:description" content="问题–出栈序列N个元素依次进栈，则出栈有多少种序列">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://lincx_py.gitee.io/2019/03/02/64and65/">
+  <link rel="canonical" href="https://lincx_py.gitee.io/2020/03/30/algt/">
 
 
 
@@ -137,7 +138,7 @@
   };
 </script>
 
-  <title>64and65 | lincx_py</title>
+  <title>algorithm-lect | lincx_py</title>
   
 
 
@@ -310,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/03/02/64and65/">
+    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2020/03/30/algt/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lincx_py">
@@ -327,7 +328,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">64and65
+          <h2 class="post-title" itemprop="name headline">algorithm-lect
               
             
           </h2>
@@ -352,7 +353,7 @@
                 
               
 
-              <time title="Created: 2019-03-02 23:07:06 / Modified: 23:10:55" itemprop="dateCreated datePublished" datetime="2019-03-02T23:07:06+08:00">2019-03-02</time>
+              <time title="Created: 2020-03-30 23:06:36 / Modified: 23:18:55" itemprop="dateCreated datePublished" datetime="2020-03-30T23:06:36+08:00">2020-03-30</time>
             
 
             
@@ -374,7 +375,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/c-c/" itemprop="url" rel="index"><span itemprop="name">c/c++</span></a></span>
 
                 
                 
@@ -389,8 +390,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/02/64and65/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2019/03/02/64and65/" itemprop="commentsCount"></span>
+                <a href="/2020/03/30/algt/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2020/03/30/algt/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -418,7 +419,12 @@
       
 
       
-        <h2 id="python-类的学习"><a href="#python-类的学习" class="headerlink" title="python 类的学习"></a>python 类的学习</h2><h1 id="class"><a href="#class" class="headerlink" title="class"></a>class</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordTool</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">        密码工具类</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, password)</span>:</span></span><br><span class="line">        <span class="comment"># 类的属性</span></span><br><span class="line">        self.password = password</span><br><span class="line">        self.strength_level = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_password</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 规则1：密码长度大于8</span></span><br><span class="line">        <span class="keyword">if</span> len(self.password) &gt;= <span class="number">8</span>:</span><br><span class="line">            self.strength_level += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'密码长度要求至少8位！'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 规则2：包含数字</span></span><br><span class="line">        <span class="keyword">if</span> self.check_number_exist():</span><br><span class="line">            self.strength_level += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'密码要求包含数字！'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 规则3：包含字母</span></span><br><span class="line">        <span class="keyword">if</span> self.check_letter_exist():</span><br><span class="line">            self.strength_level += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'密码要求包含字母！'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 类的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">check_number_exist</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">            判断字符串中是否含有数字</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        has_number = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> self.password:</span><br><span class="line">            <span class="keyword">if</span> c.isnumeric():</span><br><span class="line">                has_number = <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> has_number</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">check_letter_exist</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">            判断字符串中是否含有字母</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        has_letter = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> self.password:</span><br><span class="line">            <span class="keyword">if</span> c.isalpha():</span><br><span class="line">                has_letter = <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> has_letter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">        主函数</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    try_times = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> try_times &gt; <span class="number">0</span>:</span><br><span class="line"></span><br><span class="line">        password = input(<span class="string">'请输入密码：'</span>)</span><br><span class="line">        <span class="comment"># 实例化密码工具对象</span></span><br><span class="line">        password_tool = PasswordTool(password)</span><br><span class="line">        password_tool.process_password()</span><br><span class="line"></span><br><span class="line">        f = open(<span class="string">'password_5.0.txt'</span>, <span class="string">'a'</span>)</span><br><span class="line">        f.write(<span class="string">'密码：&#123;&#125;, 强度：&#123;&#125;\n'</span>.format(password, password_tool.strength_level))</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> password_tool.strength_level == <span class="number">3</span>:</span><br><span class="line">            print(<span class="string">'恭喜！密码强度合格！'</span>)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">'密码强度不合格！'</span>)</span><br><span class="line">            try_times -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        print()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> try_times &lt;= <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">'尝试次数过多，密码设置失败！'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+        <h2 id="问题–出栈序列"><a href="#问题–出栈序列" class="headerlink" title="问题–出栈序列"></a>问题–出栈序列</h2><p>N个元素依次进栈，则出栈有多少种序列<br><a id="more"></a><br><strong>穷举法</strong></p>
+<ul>
+<li><strong><em>思想</em></strong>：就是用穷举法列举所有可能情况</li>
+<li><strong><em>算法</em></strong>：用递归算法进行所有情况的搜索</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(left==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(right==<span class="number">0</span>)<span class="keyword">return</span> count(left<span class="number">-1</span>,right+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> count(left<span class="number">-1</span>,right+<span class="number">1</span>)+count(left,right<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count1</span><span class="params">(<span class="keyword">int</span> sout,<span class="keyword">int</span> <span class="built_in">sin</span>,<span class="keyword">int</span> &amp;sum)</span></span>&#123;</span><br><span class="line">    <span class="comment">//sin表示栈中元素个数</span></span><br><span class="line">    <span class="comment">//sout表示未进栈元素个数</span></span><br><span class="line">    <span class="keyword">if</span>(scout==<span class="number">0</span>)&#123;</span><br><span class="line">       ++sum;</span><br><span class="line">       <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>  count1(sout<span class="number">-1</span>,<span class="built_in">sin</span>+<span class="number">1</span>,sum);</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">sin</span>&gt;<span class="number">0</span>)<span class="comment">//栈中存在元素</span></span><br><span class="line">        count1(sout,<span class="built_in">sin</span><span class="number">-1</span>,sum);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N,sum;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line">    count1(<span class="number">3</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;count(N,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -436,6 +442,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
+      
 
       
       
@@ -445,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/28/63day/" rel="next" title="63day">
-                <i class="fa fa-chevron-left"></i> 63day
+              <a href="/2020/03/29/PTA2-1/" rel="next" title="PTA">
+                <i class="fa fa-chevron-left"></i> PTA
               </a>
             
           </div>
@@ -454,10 +466,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/03/66/" rel="prev" title="66">
-                66 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -642,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python-类的学习"><span class="nav-number">1.</span> <span class="nav-text">python 类的学习</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#class"><span class="nav-number"></span> <span class="nav-text">class</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题–出栈序列"><span class="nav-number">1.</span> <span class="nav-text">问题–出栈序列</span></a></li></ol></div>
             
 
           </div>

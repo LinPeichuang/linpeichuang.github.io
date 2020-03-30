@@ -310,6 +310,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/03/13/72天/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lincx_py">
+      <meta itemprop="description" content="lincx_py的博客">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lincx_py">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/13/72天/" itemprop="url">
+                  72天
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-13 12:39:51 / Modified: 12:42:38" itemprop="dateCreated datePublished" datetime="2019-03-13T12:39:51+08:00">2019-03-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><h1 id="书上的题目"><a href="#书上的题目" class="headerlink" title="书上的题目"></a>书上的题目</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">enum</span> weekday&#123;Sunday=<span class="number">7</span>,Monday=<span class="number">1</span>,Tuesday,Wednesday,Thurday,Friday,Saturday&#125;day;</span><br><span class="line">	<span class="keyword">char</span> ch=<span class="string">'A'</span>;</span><br><span class="line">	<span class="keyword">int</span> a, b, c, d, e, f, g, i;<span class="comment">//a~g分别用于表示A~G医生值夜班对应的星期，i用于控制输出次数</span></span><br><span class="line">	f = Thurday;<span class="comment">//F医生周四晚值班</span></span><br><span class="line">	<span class="keyword">for</span> (c = f+<span class="number">1</span>; c &lt;= Saturday; c++)<span class="comment">//由题可知C医生排班在F医生后且在A医生前</span></span><br><span class="line">	&#123;</span><br><span class="line">		a = c + <span class="number">1</span>;<span class="comment">//A医生比C医生晚一天</span></span><br><span class="line">		<span class="keyword">for</span> (b = Monday; b &lt;= f<span class="number">-1</span>&amp;&amp;b != a; b++)<span class="comment">//遍历B医生的值班星期数</span></span><br><span class="line">		&#123;</span><br><span class="line">			g = b + <span class="number">3</span>;</span><br><span class="line">			<span class="keyword">if</span>(g!=a&amp;&amp;g!=c&amp;&amp;g!=f)</span><br><span class="line">			&#123;   </span><br><span class="line">				<span class="keyword">for</span> (e = Monday; e &lt; Sunday&amp;&amp;e != a &amp;&amp; e != b &amp;&amp; e != c &amp;&amp; e != f&amp;&amp;e!=g; e++)<span class="comment">//遍历E医生的值班星期数</span></span><br><span class="line">				&#123;</span><br><span class="line">					d = e + <span class="number">2</span>;<span class="comment">//D医生比E医生晚两个晚上</span></span><br><span class="line">					<span class="keyword">if</span> (d != a &amp;&amp; d != b &amp;&amp; d != c &amp;&amp; d != f&amp;&amp;d!=g)<span class="comment">//判断是否全部符合题意</span></span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= <span class="number">7</span>; i++)</span><br><span class="line">						&#123;</span><br><span class="line">							<span class="built_in">cout</span> &lt;&lt; <span class="keyword">char</span>(ch + i - <span class="number">1</span>) &lt;&lt; <span class="string">" : "</span>;</span><br><span class="line">							<span class="keyword">switch</span> (i)<span class="comment">//每控制个医生对应各自值班的星期数</span></span><br><span class="line">							&#123;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">1</span>:day = weekday(a); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">2</span>:day = weekday(b); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">3</span>:day = weekday(c); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">4</span>:day = weekday(d); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">5</span>:day = weekday(e); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">6</span>:day = weekday(f); <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> <span class="number">7</span>:day = weekday(g); <span class="keyword">break</span>;</span><br><span class="line">							&#125;</span><br><span class="line">							<span class="keyword">switch</span> (day)<span class="comment">//输出排班结果</span></span><br><span class="line">							&#123;</span><br><span class="line">							<span class="keyword">case</span> Monday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Monday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Tuesday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Tuesday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Wednesday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Wednesday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Thurday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Thurday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Friday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Friday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Saturday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Saturday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							<span class="keyword">case</span> Sunday:<span class="built_in">cout</span> &lt;&lt; <span class="string">"Sunday"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/03/11/71tian/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1711,163 +1868,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lincx_py.gitee.io/2019/02/26/61天/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lincx_py">
-      <meta itemprop="description" content="lincx_py的博客">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/43648278?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lincx_py">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/26/61天/" itemprop="url">
-                  61天
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-26 21:48:55 / Modified: 21:53:35" itemprop="dateCreated datePublished" datetime="2019-02-26T21:48:55+08:00">2019-02-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/未分类/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="css学习"><a href="#css学习" class="headerlink" title="css学习"></a>css学习</h2><h1 id="DIV应用"><a href="#DIV应用" class="headerlink" title="DIV应用"></a>DIV应用</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .inline_div&#123;display:inline-block;&#125;</span></span><br><span class="line"><span class="undefined">        #wrap&#123;width:450px;height:250px;border:2px solid black;&#125;</span></span><br><span class="line"><span class="undefined">        #d1,#d2&#123;background-color:green;</span></span><br><span class="line"><span class="undefined">        width:40%;height:100px;margin:20px;&#125;</span></span><br><span class="line"><span class="undefined">        #d2&#123;background-color:yellow;&#125;</span></span><br><span class="line"><span class="undefined">        #d3&#123;height:100px;width:90%;border:2px solid black;background-color:#66ff33;margin:0 auto;&#125;</span></span><br><span class="line"><span class="undefined">        h3&#123;font-size:28px;color:#0033ff;&#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>图层嵌套的应用<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d1"</span> <span class="attr">class</span>=<span class="string">"inline_div"</span>&gt;</span>这是div1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d2"</span> <span class="attr">class</span>=<span class="string">"inline_div"</span>&gt;</span>这是div2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d3"</span>&gt;</span>这是div3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        body&#123;margin:0;&#125;</span></span><br><span class="line"><span class="undefined">        div&#123;position:absolute;width:200px;height:200px;&#125;</span></span><br><span class="line"><span class="undefined">        #d1&#123;background-color:black;color:white;z-index:0&#125;</span></span><br><span class="line"><span class="undefined">        #d2&#123;background-color:red;top:25px;left:50px;z-index:1;&#125;</span></span><br><span class="line"><span class="undefined">        #d3&#123;background-color:yellow;top:50px;left:100px;z-index:2&#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>图层叠加的应用<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d1"</span> &gt;</span>这是div1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d2"</span> &gt;</span>这是div2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d3"</span>&gt;</span>这是div3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1917,7 +1917,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">105</span>
+                    <span class="site-state-item-count">106</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
